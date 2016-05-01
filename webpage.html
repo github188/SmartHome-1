@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function send(data)
+    {
+        window.alert(data);
+    }
+</script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<h3 class="text-center">
+				<strong>家居监控</strong>
+			</h3>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span4">
+			<h4>
+				控制
+			</h4>
+			<p>
+				<span class="label badge-inverse">电机：</span>
+			</p> 
+                <button class="btn" type="button" onClick="send('A1')">前进</button> 
+                <button class="btn" type="button" onClick="send('A2')">后退</button> 
+                <button class="btn" type="button">停止</button>
+            <br/> 
+            <br/> 
+			<p>
+				<span class="label">方向：</span>
+			</p> 
+                <button class="btn btn-primary" type="button">左转</button> 
+                <button class="btn btn-primary" type="button">右转</button> 
+                <button class="btn btn-primary" type="button">正前</button>
+            <br/> 
+            <br/> 
+			<p>
+				<span class="label badge-inverse">自动避障</span>
+			</p> 
+                <button class="btn btn-info" type="button">开启</button> 
+                <button class="btn btn-info" type="button">关闭</button>
+		</div>
+		<div class="span4">
+			<h4>
+				图像
+			</h4> 
+            <button class="btn btn-success" type="button">获取图像</button>
+            <br/>
+            <br/>
+            <img alt="140x140" src="img/a.jpg" class="img-rounded" />
+		</div>
+		<div class="span4">
+			<h4>
+				信息
+			</h4>
+		</div>
+	</div>
+</div>
+</body>
+</html>
