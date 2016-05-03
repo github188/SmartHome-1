@@ -1,6 +1,6 @@
 <?php
 define("separator_len", 5);
-$data_file_name = "./20160430_1144.txt";
+$data_file_name = "./20160503_2224.txt";
 $data_file_size = filesize($data_file_name);
     $bi_data_size = floor($data_file_size*3/2);
     $bi_width = 320;

@@ -168,7 +168,17 @@
       //window.alert(command);
       var to_client_id = $("#client_list option:selected").attr("value");
       var to_client_name = $("#client_list option:selected").text();
-      ws.send('{"type":"say","to_client_id":"'+to_client_id+'","to_client_name":"'+to_client_name+'","content":"'+command.replace(/"/g, '\\"').replace(/\n/g,'\\n').replace(/\r/g, '\\r')+'"}');
+        ws.send('{"type":"say","to_client_id":"'+to_client_id+'","to_client_name":"'+to_client_name+'","content":"'+command.replace(/"/g, '\\"').replace(/\n/g,'\\n').replace(/\r/g, '\\r')+'"}');
+        /*
+        if(command == 'T')
+        {
+            ws.send('{"type":"test","content":"20160503_2225.txt"}');
+        }
+        else
+        {
+            ws.send('{"type":"say","to_client_id":"'+to_client_id+'","to_client_name":"'+to_client_name+'","content":"'+command.replace(/"/g, '\\"').replace(/\n/g,'\\n').replace(/\r/g, '\\r')+'"}');
+        }
+        */
     }
   </script>
 </head>
@@ -213,6 +223,7 @@
 				图像
 			</h4> 
             <button class="btn btn-success" type="button" onClick="sendCommand('C')">获取图像</button>
+            <!--<button class="btn btn-success" type="button" onClick="sendCommand('T')">测试</button>-->
             <br/>
             <br/>
             <div id="bmp_area">

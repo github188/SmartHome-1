@@ -27,9 +27,9 @@ class compute
         for($i=0; $i<$bi_height; $i++)
         {
             $pos = strpos($stream, $findString, $pos);
-            RowTransform($source_file, $fp, $pos);
-            //echo "row:".$i." position:".$pos."<br/>"; 
-            $pos += separator_len;
+            compute::RowTransform($source_file, $fp, $pos);
+            //echo "row:".$i." position:".$pos."\n"; 
+            $pos += 5;
         }
         fclose($source_file);
         fclose($fp);
@@ -38,7 +38,7 @@ class compute
 
     public static function RowTransform($source_file, $fp, $pos)
     {
-        $rowDataStart = $pos + separator_len;
+        $rowDataStart = $pos + 5;
         fseek($source_file, $rowDataStart, SEEK_SET);
         for($j=0; $j<320; $j++)
         {
@@ -111,7 +111,11 @@ class Event
         switch($message_data['type'])
         {
             // 客户端回应服务端的心跳
-            case 'data':
+            case 'test':
+               $bmp_file_name = compute::data_to_bmp($message_data['content']);
+               $new_message = array('type'=>'bmp','file_name'=>$bmp_file_name);
+               //Gateway::sendToCurrentClient(json_encode($new_message));
+               Gateway::sendToAll(json_encode($new_message));
                 return;
             case 'pong':
                 return;
