@@ -26,10 +26,10 @@ class compute
         $findString = "START";
         for($i=0; $i<$bi_height; $i++)
         {
-            $pos = strpos($stream, $findString, $pos);
+            $pos = strrpos($stream, $findString);
+            $stream = substr($stream, 0, $pos);
             compute::RowTransform($source_file, $fp, $pos);
             //echo "row:".$i." position:".$pos."\n"; 
-            $pos += 5;
         }
         fclose($source_file);
         fclose($fp);

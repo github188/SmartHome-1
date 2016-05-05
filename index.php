@@ -169,8 +169,7 @@
       //window.alert(command);
       var to_client_id = $("#client_list option:selected").attr("value");
       var to_client_name = $("#client_list option:selected").text();
-        ws.send('{"type":"say","to_client_id":"'+to_client_id+'","to_client_name":"'+to_client_name+'","content":"'+command.replace(/"/g, '\\"').replace(/\n/g,'\\n').replace(/\r/g, '\\r')+'"}');
-        /*
+        //ws.send('{"type":"say","to_client_id":"'+to_client_id+'","to_client_name":"'+to_client_name+'","content":"'+command.replace(/"/g, '\\"').replace(/\n/g,'\\n').replace(/\r/g, '\\r')+'"}');
         if(command == 'T')
         {
             ws.send('{"type":"test","content":"20160503_2225.txt"}');
@@ -179,7 +178,6 @@
         {
             ws.send('{"type":"say","to_client_id":"'+to_client_id+'","to_client_name":"'+to_client_name+'","content":"'+command.replace(/"/g, '\\"').replace(/\n/g,'\\n').replace(/\r/g, '\\r')+'"}');
         }
-        */
     }
   </script>
 </head>
