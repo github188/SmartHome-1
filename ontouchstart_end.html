@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,target-densitydpi=medium-dpi">
+<link rel="stylesheet" typ="text/css" href="onmouse.css"></link>
+<script>
+function sendCommand(command)
+{
+    var des = document.getElementById("des");
+    des.innerText = command;
+}
+</script>
+</head>
+<body>
+    <input type=button style="background-image: url(up.png);width:80px;height:80px;" ontouchstart="sendCommand('A1')" ontouchend="sendCommand('A3')"/>
+    <input type=button style="background-image: url(down.png);width:80px;height:80px;" ontouchstart="sendCommand('A2')" ontouchend="sendCommand('A3')"/>
+    <div id="des">
+        hello
+    </div>
+</body>
+</html>
