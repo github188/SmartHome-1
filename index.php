@@ -204,6 +204,20 @@
         }
     }
   </script>
+   <style type="text/css">
+        .style2
+        {
+            width: 100px;
+        }
+        .style4
+        {
+            width: 56px;
+        }
+        .style5
+        {
+            width: 62px;
+        }
+    </style>
 </head>
 <body onload="connect();">
 <div class="container-fluid">
@@ -216,61 +230,251 @@
 	</div>
 	<div class="row-fluid">
 		<div class="span4">
-			<h4>
-				控制
-			</h4>
-			<p>
-				<span class="label badge-inverse">电机：</span>
-			</p> 
                <!-- 
                 <input type=button style="background-image: url(up.png);width:70px;height:40px;" ontouchstart="sendCommand('A1')" ontouchend="sendCommand('A3')"/>
                 <input type=button style="background-image: url(down.png);width:70px;height:40px;" ontouchstart="sendCommand('A2')" ontouchend="sendCommand('A3')"/>
                 -->
-                <button class="btn btn-info" type="button" ontouchstart="onTouchStart('A1')" ontouchend="onTouchEnd()">前进</button> 
-                <button class="btn btn-info" type="button" ontouchstart="onTouchStart('A2')" ontouchend="onTouchEnd()">后退</button>
-            <br/> 
-            <br/> 
+                <table style="width:100%;">
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                        <td rowspan="11">
+                            <table style="width:56%;">
+                                <tr>
+                                    <td class="style2">
+			<h4>
+				控制
+			</h4>
+			                        </td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+			                            &nbsp;</td>
+                                    <td class="style2">
+			                            &nbsp;</td>
+                                    <td class="style5">
 			<p>
 				<span class="label">方向：</span>
 			</p> 
+                                    </td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style2" align="right">
+                                        &nbsp;</td>
+                                    <td class="style5" align="right">
                 <button class="btn btn-primary" type="button" ontouchstart="sendCommand('B1')" ontouchend="sendCommand('B3')">左转</button> 
+                                    </td>
+                                    <td class="style2">
                 <button class="btn btn-primary" type="button" ontouchstart="sendCommand('B2')" ontouchend="sendCommand('B3')">右转</button> 
-            <br/> 
-            <br/> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style2" align="right">
+                                        &nbsp;</td>
+                                    <td class="style5" align="right">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
 			<p>
 				<span class="label badge-inverse">自动避障</span>
 			</p> 
+                                    </td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
                 <button class="btn btn-info" type="button" onClick="sendCommand('D1')">开启</button> 
+                                    </td>
+                                    <td class="style2">
                 <button class="btn btn-info" type="button" onClick="sendCommand('D2')">关闭</button>
+			                        </td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
 			<p>
 				<span class="label badge-inverse">摄像头位置</span>
 			</p> 
+                                    </td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="style2">
                 <button class="btn btn-info" type="button" onClick="sendCommand('E1')">向上</button> 
+                                    </td>
+                                    <td class="style2">
                 <button class="btn btn-info" type="button" onClick="sendCommand('E2')">向下</button>
-		</div>
-		<div class="span4">
+		                            </td>
+                                    <td class="style5">
+                                        &nbsp;</td>
+                                    <td class="style2">
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td rowspan="11">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+			<p>
+				<span class="label badge-inverse">电机：</span>
+			</p> 
+                                    </td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                <button class="btn btn-info" type="button" ontouchstart="onTouchStart('A1')" ontouchend="onTouchEnd()">前进</button> 
+                                    </td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                <button class="btn btn-info" type="button" ontouchstart="onTouchStart('A2')" ontouchend="onTouchEnd()">后退</button>
+                                    </td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                        <td>
 			<h4>
 				图像
-			</h4> 
+						</h4> 
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                        <td>
             <button class="btn btn-success" type="button" onClick="sendCommand('C')">获取图像</button>
-            <!--<button class="btn btn-success" type="button" onClick="sendCommand('T')">测试</button>-->
-            <br/>
-            <br/>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                        <td>
             <div id="bmp_area">
                 pic area<br/>
             </div>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    </table>
 		</div>
 		<div class="span4">
-			<h4>
+            <!--<button class="btn btn-success" type="button" onClick="sendCommand('T')">测试</button>-->
+            <br/>
+            <h4>
 				信息
-			</h4>
+			 
+            </h4>
             组号：<?php echo isset($_GET['room_id'])&&intval($_GET['room_id'])>0 ? intval($_GET['room_id']):1; ?>
             <select style="margin-bottom:8px" id="client_list">
                 <option value="all">所有人</option>
             </select>
-            <div class="caption" id="userlist"></div>
+            <div class="caption" id="userlist">
+            </div>
             <div class="thumbnail">
-                <div class="caption" id="dialog"></div>
+                <div class="caption" id="dialog">
+                </div>
             </div>
 		</div>
 	</div>
