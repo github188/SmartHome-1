@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8" />
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+        window.gone_one_second = false;
+  $("#up").mousedown(function(){
+      //window.alert("in");
+      setTimeout("window.gone_one_second = true", 1000);
+  });
+
+  $("#up").mouseup(function(){
+      window.alert(window.gone_one_second);
+  });
+});
+</script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>tap 事件</h1>
+  </div>
+
+  <div data-role="content">
+    <button id="up" class="btn btn-info" type="button">前进</button> 
+  </div>
+    <div id="des">
+    </div>
+
+  <div data-role="footer">
+    <h1>页脚文本</h1>
+  </div>
+</div> 
+
+</body>
+</html>
+
